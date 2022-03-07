@@ -34,7 +34,7 @@ debian/lua_libs_debian.c:
 		echo "if (luaL_dostring(lua, \"$$X = require('$$X');\"))" >>$@; \
 		echo "    serverLog(LL_NOTICE, \"Error loading $$X library\");" >>$@; \
 	done
-	echo 'luaL_dostring(lua, "module = nil; require = nil;");' >>$@
+	echo 'luaL_dostring(lua, "module = nil; require = nil; package = nil");' >>$@
 
 override_dh_auto_clean:
 	dh_auto_clean

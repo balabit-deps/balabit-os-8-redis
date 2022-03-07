@@ -1,3 +1,12 @@
+redis (5:5.0.7-2ubuntu0.1) focal-security; urgency=medium
+
+  * SECURITY UPDATE: Lua sandbox escape
+    - debian/rules: Ensure arbitrary Lua functionality is not permitted by
+      specifying a nil package
+    - CVE-2022-0543
+
+ -- Alex Murray <alex.murray@canonical.com>  Mon, 07 Mar 2022 13:18:24 +1030
+
 redis (5:5.0.7-2) unstable; urgency=medium
 
   [ Christian Göttsche ]
